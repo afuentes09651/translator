@@ -16,9 +16,24 @@ function Input(){
     setOutput(spanish); //set the output
   }
 
+  //this function handles the change within the user input to update state accordingly
+  function handleChange(e){
+    setInput(e.target.value); //set the input to the user input that is present in the text box
+    console.log('input has changed: ', input); //debugging log
+  }
+
   return(
     <>
-    <p>Enter Input here</p>
+    <label htmlFor='input'>Enter Input: </label>
+    <textarea
+        rows='4'
+        columns='50'
+        maxLength='300'
+        placeholder='Enter English Here'
+        id='userInput'
+        value={input}
+        onChange={handleChange}>
+    </textarea>
     <p>{output}</p>
     <button onClick={() => execTrans()}>Click Me</button>
     </>
