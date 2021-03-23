@@ -7,12 +7,20 @@ function Input(){
 
   //some states for our I/O
   const [input, setInput] = useState(''); //initialized to test for testing purposes
-  const [output,setOutput] = useState('')
+  const [output,setOutput] = useState('');
 
   //This function executes the translation
-  async function execTrans(){
+  async function execTrans(e){
+    e.preventDefault();
+
+    //get the language information...
+    const langTo = e.target.langTo.value;
+    const langFrom = e.target.langFrom.value;
+
+
+    //prepare and execute translation...
     setOutput('loading translation...'); //Notifying the user that the translation is loading if it takes a while...
-    const spanish = await translate('hello world', 'es'); //test call
+    const spanish = await translate(input, {to: langTo, from: langFrom}); //test call
     setOutput(spanish); //set the output
   }
 
@@ -24,18 +32,51 @@ function Input(){
 
   return(
     <>
-    <label htmlFor='input'>Enter Input: </label>
-    <textarea
-        rows='4'
-        columns='50'
-        maxLength='300'
-        placeholder='Enter English Here'
-        id='userInput'
-        value={input}
-        onChange={handleChange}>
-    </textarea>
+
+    <form
+      onSubmit={execTrans}>
+
+      <label htmlFor='langTo'>Select output language: </label>
+      <select id='langTo'>
+        <option value='es' defaultValue>Spanish</option>
+        <option value='en' >English</option>
+        <option value='fr'>French</option>
+        <option value='de'>German</option>
+        <option value='ja'>Japanese</option>
+      </select>
+
+      <br />
+
+      <label htmlFor='langFrom'>Select origin language: </label>
+      <select id='langFrom'>
+        <option value='en' defaultValue>English</option>
+        <option value='es'>Spanish</option>
+        <option value='fr'>French</option>
+        <option value='de'>German</option>
+        <option value='ja'>Japanese</option>
+      </select>
+
+      <br />
+
+      <label htmlFor='input'>Enter Input: </label>
+      <textarea
+          rows='4'
+          columns='50'
+          maxLength='300'
+          placeholder='Enter English Here'
+          id='userInput'
+          value={input}
+          onChange={handleChange}>
+      </textarea>
+
+      <br />
+
+      <input type='submit' value='Submit'/>
+
+    </form>
+
+
     <p>{output}</p>
-    <button onClick={() => execTrans()}>Click Me</button>
     </>
   );
 }
