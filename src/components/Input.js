@@ -36,10 +36,10 @@ function Input(){
     <form
       onSubmit={execTrans}>
 
-      <label htmlFor='langTo'>Select output language: </label>
-      <select id='langTo'>
-        <option value='es' defaultValue>Spanish</option>
-        <option value='en' >English</option>
+      <label htmlFor='langFrom'>Select origin language: </label>
+      <select id='langFrom'>
+        <option value='en' defaultValue>English</option>
+        <option value='es'>Spanish</option>
         <option value='fr'>French</option>
         <option value='de'>German</option>
         <option value='ja'>Japanese</option>
@@ -47,10 +47,10 @@ function Input(){
 
       <br />
 
-      <label htmlFor='langFrom'>Select origin language: </label>
-      <select id='langFrom'>
-        <option value='en' defaultValue>English</option>
-        <option value='es'>Spanish</option>
+      <label htmlFor='langTo'>Select output language: </label>
+      <select id='langTo'>
+        <option value='es' defaultValue>Spanish</option>
+        <option value='en' >English</option>
         <option value='fr'>French</option>
         <option value='de'>German</option>
         <option value='ja'>Japanese</option>
@@ -63,7 +63,7 @@ function Input(){
           rows='4'
           columns='50'
           maxLength='300'
-          placeholder='Enter English Here'
+          placeholder='Enter Text Here'
           id='userInput'
           value={input}
           onChange={handleChange}>
