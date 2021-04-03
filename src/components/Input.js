@@ -31,7 +31,7 @@ function Input(){
   }
 
   return(
-    <>
+    <div class='contain'>
 
     <form
       onSubmit={execTrans}>
@@ -77,7 +77,7 @@ function Input(){
 
 
     <p>{output}</p>
-    </>
+    </div>
   );
 }
 

@@ -1,0 +1,17 @@
+.contain{
+  display: flex;
+
+}
+.jumbo-title{
+  color: blue;
+  text-align: center;
+  background-color: lightblue;
+}
+
+.input{
+  float:right;
+}
+
+.output{
+
+}
