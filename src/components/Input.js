@@ -76,7 +76,7 @@ function Input(){
 
           <br />
 
-        <p>{output}</p>
+        <textarea value={output}/>
     </fieldset>
   </div>
       <input type='submit' value='Submit'/>
