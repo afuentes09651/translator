@@ -1,7 +1,4 @@
-.contain{
-  display: flex;
 
-}
 .jumbo-title{
   color: blue;
   text-align: center;
@@ -11,8 +8,11 @@
   margin-bottom: 2.15rem;
 }
 
-.input{
-  resize:none;
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex:2;
 }
 
 .output{
