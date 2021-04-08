@@ -71,8 +71,8 @@ function Input(){
         </textarea>
       </fieldset>
 
-      <fieldset>
-        <br/>
+      <fieldset
+        class='opfs'>
           <label htmlFor='langTo'>Select output language: </label>
           <select id='langTo' class='form-control'>
             <option value='es' defaultValue>Spanish</option>

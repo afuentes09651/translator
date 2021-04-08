@@ -4,18 +4,20 @@
   color: blue;
   text-align: center;
   background-color: lightblue;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .title{
   padding-top: .25rem;
-  padding-left: .50rem;
-  padding-right: 1.25rem;
-  font-size: 1.75rem;
+  padding-left: .50em;
+  padding-right: .5rem;
+  margin: 0;
+  font-size: 1.75em;
 }
 
 .subtitle{
-  
+  padding-top:1rem;
+  font-size: .85rem;
 }
 
 .wrapper{
@@ -45,5 +47,9 @@ fieldset{
 }
 
 .submitTrans{
-  align-self: center;
+  margin-bottom: .15rem;
+}
+
+.opfs{
+  padding-top:2rem;
 }
