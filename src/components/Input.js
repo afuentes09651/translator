@@ -34,9 +34,17 @@ function Input(){
     <>
     <form
       onSubmit={execTrans}>
-      <div class='wrapper'>
 
+
+
+      <div class='wrapper'>
       <fieldset>
+        <input
+          type='submit'
+          value='Submit'
+          class='submitTrans'
+          />
+        <br />
         <label
           htmlFor='langFrom'
           >Select origin language: </label>
@@ -64,6 +72,7 @@ function Input(){
       </fieldset>
 
       <fieldset>
+        <br/>
           <label htmlFor='langTo'>Select output language: </label>
           <select id='langTo' class='form-control'>
             <option value='es' defaultValue>Spanish</option>
@@ -77,11 +86,6 @@ function Input(){
         <textarea id='output' value={output}/>
     </fieldset>
   </div>
-      <input
-        type='submit'
-        value='Submit'
-        class='submitTrans'
-        />
     </form>
 
     </>
