@@ -9,6 +9,13 @@ function Input(){
   const [input, setInput] = useState(''); //initialized to test for testing purposes
   const [output,setOutput] = useState('');
 
+  //This function allows for a form submit using 'ENTER'
+  const handleKeypress = e => {
+  if (e.keyCode === 13) {
+    this.btn.click();
+  }
+};
+
   //This function executes the translation
   async function execTrans(e){
     e.preventDefault();
