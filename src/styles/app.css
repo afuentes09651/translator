@@ -1,11 +1,21 @@
 
 .jumbo-title{
+  display: flex;
   color: blue;
   text-align: center;
   background-color: lightblue;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
-  margin-bottom: 2.15rem;
+  margin-bottom: 2rem;
+}
+
+.title{
+  padding-top: .25rem;
+  padding-left: .50rem;
+  padding-right: 1.25rem;
+  font-size: 1.75rem;
+}
+
+.subtitle{
+  
 }
 
 .wrapper{
