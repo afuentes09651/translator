@@ -59,7 +59,6 @@ function Input(){
             id='userInput'
             value={input}
             onChange={handleChange}
-            class='form-control input'
             >
         </textarea>
       </fieldset>
@@ -74,14 +73,16 @@ function Input(){
             <option value='ja'>Japanese</option>
           </select>
 
-          <br />
-
-        <textarea value={output}/>
+        <label htmlFor='output'>Output: </label>
+        <textarea id='output' value={output}/>
     </fieldset>
   </div>
-      <input type='submit' value='Submit'/>
+      <input
+        type='submit'
+        value='Submit'
+        class='submitTrans'
+        />
     </form>
-
 
     </>
   );
